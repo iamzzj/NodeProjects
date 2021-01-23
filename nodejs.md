@@ -22,10 +22,40 @@
 
 # nvm（nodejs版本管理）
 
+---
+
+   
+
+
+
+# nodejs
+
+1.  nvm 管理nodejs版本
+
+2. nrm npm源的问题
+
+3. nodemon 监听文件变化，自动重启服务
+
    ---
 
-   
+      
 
-   
+# 	Web应用和Express介绍
 
-   
+* 什么是web应用
+
+* Express在web应用中的应用
+
+
+  ## web应用
+
+  前端 
+  ajxa，ws --->服务器（web应用）-->缓存/数据库/
+
+
+  
+  express： node中的一种 web框架
+
+  接受 req，处理res
+
+  
