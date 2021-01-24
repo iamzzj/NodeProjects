@@ -62,7 +62,7 @@
   ajxa，ws --->服务器（web应用）-->缓存/数据库/
 
 
-  
+
   express： node中的一种 web框架
 
   接受 req，处理res
@@ -136,4 +136,47 @@ www.baidu.com/a/b/c.html
 * 自定义异常处理
 
   
+
+# Mysql安装
+
+## brew install mysql
+
+## brew services list
+
+## brew services start(stop) mysql
+
+---
+
+# Mysql命令
+
+## mysql -u root
+
+## show databases;(;不可少)
+
+## use database name;
+
+## show tables;
+
+## sql语句
+
+---
+
+# Sequelize介绍和使用
+
+* 什么事ORM
+* Sequelize作用
+* 在nodejs应用中集成sequelize
+
+node-app -- ORM(sequelize) -- 驱动（node-mysql) -- mysql db
+
+
+
+1. npm install sequelize -S
+2. npm install mysql2 -S 
+3. npm install sequelize-cli -S
+4. npx sequelize-cli init
+5. npx sequelize-cli model:generate --name User --attributes name:string
+6. npx sequelize-cli db:migrate --env=development
+
+---
 
