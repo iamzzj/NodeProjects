@@ -86,3 +86,25 @@
 ## 通过uri --》路径
 
 www.baidu.com/a/b/c.html
+
+1. 需要定义一个 api/路由 需要满足 客户端 无论使用什么请求方式（get/post/delete.put）都可以得到响应
+
+   *  app.all  //全响应
+
+   ​         app.all('/demo', (req,res)=>{})
+
+2. 无论客户端使用任何uri，我们额服务都可以响应 --> 日志
+
+   * app.use --> 使用中间件
+
+3. 如何进行路由拆分
+
+   meber
+
+   sku
+
+   order
+
+   
+
+   * express.Router
