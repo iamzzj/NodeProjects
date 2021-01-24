@@ -50,6 +50,31 @@ app.get('/test',(req,res)=>{
 	})
 })*/
 
+app.get('/err', (req, res)=>{
+	throw new Erro('测试异常功能')
+})
+
+function error_handler_middleware(err,req,res,next){
+	if(err){
+		let message = err;
+		res.status(500)
+		.json({
+			message
+		})
+	}else{
+
+	}
+}
+
+function not_found_handler(req,res,next){
+	res.json({
+		message: 'api不存在'
+	})
+}
+
+app.use(not_found_handler)
+app.use(error_handler_middleware)
+
 app.listen(3000, ()=>{
 	console.log("server start")
 })

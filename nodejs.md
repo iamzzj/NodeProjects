@@ -124,3 +124,16 @@ www.baidu.com/a/b/c.html
    * app.use 加载进来
 2. router 级别
 3. 异常处理 --》 app级别
+
+---
+
+# 异常处理
+
+* 异常捕获
+
+* Express内置异常处理
+
+* 自定义异常处理
+
+  
+
