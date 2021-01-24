@@ -108,3 +108,19 @@ www.baidu.com/a/b/c.html
    
 
    * express.Router
+
+---
+
+# 中间件的介绍和使用
+
+* 什么是express中间件
+* 内置中间件和第三方中间件介绍
+* 自定义中间件
+
+
+
+1. app 级别的使用
+   * 注册的时候，一定是在最顶级的
+   * app.use 加载进来
+2. router 级别
+3. 异常处理 --》 app级别
