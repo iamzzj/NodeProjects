@@ -3,8 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <script src="./js/vue.js"></script>
 </head>
 <body>
- Hello world!!!
+<div id="div1">
+    <h1>{{ title }}</h1>
+    <ul>
+        <li v-for="item in items">{{item.name}}</li>
+    </ul>
+</div>
+<script>
+    const div1 = new Vue({
+        el: '#div1',
+        data: {
+            title: 'Index',
+            items: [
+                {name: 'name1'},
+                {name: 'name2'},
+                {name: 'name3'},
+                {name: 'name4'}
+            ]
+        }
+    })
+</script>
 </body>
 </html>
