@@ -180,3 +180,9 @@ node-app -- ORM(sequelize) -- 驱动（node-mysql) -- mysql db
 
 ---
 
+# 其他中间件
+
+## body-parser
+
+npm install body-parser -S
+

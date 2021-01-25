@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios.min.js"></script>
+</head>
+<body>
+Hello World!!!
+
+<script>
+    axios.post('http://localhost:3000/todo/create',
+        {
+            name: "小明",
+            deadline: "2021-1-25",
+            content: "index.html"
+        }).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error);
+        })
+
+    axios.post('http://localhost:3000/todo/update',
+        {
+            id: 1,
+            name: "小明",
+            deadline: "2021-1-25",
+            content: "index.html"
+        }).then(function (response) {
+        console.log(response);
+    }).catch(function (error) {
+        console.log(error);
+    })
+</script>
+</body>
+</html>
