@@ -11,10 +11,10 @@ app.use(express.static('static', {
     extensions: ['html']
 }))
 
-app.get('/create', (req, res) => {
+app.get('/create', async (req, res) => {
     let {name} = req.query;
     // promise user-->sequelize object
-    let user = models.User.create({
+    let user = await models.User.create({
         name
     })
     console.log(user)
@@ -24,13 +24,13 @@ app.get('/create', (req, res) => {
     })
 })
 
-app.get('/list', (req, res) => {
-    let list = models.User.findAll();
+app.get('/list', async (req, res) => {
+    let list = await models.User.findAll();
     res.json({
         list
     })
 })
 
-app.listen(3000, () => {
+app.listen(9999, () => {
     console.log("server start 3000");
 })
