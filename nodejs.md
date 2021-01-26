@@ -194,3 +194,16 @@ node-app -- ORM(sequelize) -- 驱动（node-mysql) -- mysql db
 
 npm install body-parser -S
 
+# 项目的发布与运维
+
+npm i pm2 -g
+
+pm2 init
+
+pm2 start ecosystem.config.js
+
+pm2 list
+
+pm2 restart id
+
+pm2 flush//删除日志
