@@ -10,7 +10,7 @@
 Hello World!!!
 
 <script>
-    axios.post('http://localhost:3000/todo/create',
+    /*axios.post('http://localhost:3000/todo/create',
         {
             name: "小明",
             deadline: "2021-1-25",
@@ -19,17 +19,34 @@ Hello World!!!
             console.log(response);
         }).catch(function (error) {
             console.log(error);
-        })
+        })*/
 
-    axios.post('http://localhost:3000/todo/update',
+    /*axios.post('http://localhost:3000/todo/update',
         {
             id: 1,
             name: "小明",
             deadline: "2021-1-25",
-            content: "index.html"
+            content: "修电脑"
         }).then(function (response) {
         console.log(response);
     }).catch(function (error) {
+        console.log(error);
+    })*/
+
+    /*axios.post('http://localhost:3000/todo/update_status',
+        {
+            id: 3,
+            status: 3
+        }).then(function (response) {
+        console.log(response);
+    }).catch(function (error) {
+        console.log(error);
+    })*/
+
+    axios.get('http://localhost:3000/todo/list/-1/1')
+        .then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
         console.log(error);
     })
 </script>

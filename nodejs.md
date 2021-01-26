@@ -159,6 +159,14 @@ www.baidu.com/a/b/c.html
 
 ## sql语句
 
+###### 删除表
+
+drop table table_name;
+
+###### 清空表
+
+Delete from table_name;
+
 ---
 
 # Sequelize介绍和使用
