@@ -7,31 +7,78 @@
     <script src="./js/axios.min.js"></script>
 </head>
 <body>
-Hello World!!!
+<div id="div1">
+    <button v-on:click="create">创建</button>
+    <button v-on:click="update">更新</button>
+    <button v-on:click="list">列表</button>
+
+    <p>{{ message }}</p>
+
+    <ul>
+        <li v-for="todo in todos">{{todo}}</li>
+    </ul>
+</div>
 
 <script>
-    /*axios.post('http://localhost:3000/todo/create',
-        {
-            name: "小明",
-            deadline: "2021-1-25",
-            content: "index.html"
-        }).then(function (response) {
-            console.log(response);
-        }).catch(function (error) {
-            console.log(error);
-        })*/
-
-    /*axios.post('http://localhost:3000/todo/update',
-        {
-            id: 1,
-            name: "小明",
-            deadline: "2021-1-25",
-            content: "修电脑"
-        }).then(function (response) {
-        console.log(response);
-    }).catch(function (error) {
-        console.log(error);
-    })*/
+    var div1 = new Vue({
+        el: '#div1',
+        data: {
+            message: '',
+            todos: []
+        },
+        methods: {
+            create: function () {
+                const that = this;
+                axios.post('http://localhost:3000/todo/create',
+                    {
+                        name: "小明",
+                        deadline: "2021-1-25",
+                        content: "index.html"
+                    })
+                    .then(function (response) {
+                        console.log(response);
+                        that.message = response.data;
+                        that.todos = [];
+                    }).catch(function (error) {
+                        console.log(error);
+                        that.message = error.data;
+                    }
+                )
+            },
+            update: function () {
+                const that = this;
+                axios.post('http://localhost:3000/todo/update',
+                    {
+                        id: 3,
+                        name: "小明",
+                        deadline: "2021-1-25",
+                        content: "修电脑"
+                    })
+                    .then(function (response) {
+                        console.log(response);
+                        that.message = response.data;
+                        that.todos = [];
+                    }).catch(function (error) {
+                        console.log(error);
+                        that.message = error.data;
+                    }
+                )
+            },
+            list: function () {
+                const that = this;
+                axios.get('http://localhost:3000/todo/list/-1/1')
+                    .then(function (response) {
+                        console.log(response);
+                        that.message = '';
+                        that.todos = response.data.list.rows;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                        that.message = error.data;
+                    })
+            }
+        }
+    })
 
     /*axios.post('http://localhost:3000/todo/update_status',
         {
@@ -43,12 +90,6 @@ Hello World!!!
         console.log(error);
     })*/
 
-    axios.get('http://localhost:3000/todo/list/-1/1')
-        .then(function (response) {
-            console.log(response);
-        }).catch(function (error) {
-        console.log(error);
-    })
 </script>
 </body>
 </html>
